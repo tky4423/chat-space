@@ -35,6 +35,20 @@ Things you may want to cover:
 - has_many :members
 - has_many :messages
 
+## messagesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+|body|text|null: false|
+|image|string||
+|created_at|timestamps||
+
+### Association
+- belongs_to :user
+- belongs_to :group
+
 
 
 ## membersテーブル
