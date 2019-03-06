@@ -9,8 +9,7 @@ body {
 }
 
 #wrapper {
-  float: left;
-  width: 100%;
+  width: 100vw;
   height: 100vw;
 }
 
@@ -18,8 +17,18 @@ body {
   float: left;
   width: 300px;
   height: 100vw;
-
   background-color: #2f3e51;
+
+}
+
+#side-header {
+  height: 100px;
+  background-color: #253141;
+}
+
+
+#groups {
+
 
 }
 
@@ -28,4 +37,16 @@ body {
   width: calc(100vw - 300px);
   height: 100vw;
   background-color: #fafafa;
+}
+
+#main-header {
+  height: 100px;
+  background-color: white;
+}
+#messages {
+
+}
+
+#form {
+
 }
