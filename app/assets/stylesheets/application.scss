@@ -1,52 +1,6 @@
 @import "./reset";
+@import "./style";
 
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
-body {
-  height: 100vw;
-  margin: 0;
-  padding: 0;
-
-}
-
-#wrapper {
-  width: 100vw;
-  height: 100vw;
-}
-
-#chat-side {
-  float: left;
-  width: 300px;
-  height: 100vw;
-  background-color: #2f3e51;
-
-}
-
-#side-header {
-  height: 100px;
-  background-color: #253141;
-}
-
-
-#groups {
-
-
-}
-
-#chat-main {
-  float: left;
-  width: calc(100vw - 300px);
-  height: 100vw;
-  background-color: #fafafa;
-}
-
-#main-header {
-  height: 100px;
-  background-color: white;
-}
-#messages {
-
-}
-
-#form {
-
-}

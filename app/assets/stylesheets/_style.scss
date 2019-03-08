@@ -1,0 +1,195 @@
+html,body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+}
+
+a {
+  text-decoration: none
+}
+
+.flashbox {
+  color: white;
+  font-size: 1rem;
+  font-weight: lighter;
+  text-align: center;
+  width: 100vw;
+  .notice {
+    background-color:#38AEF0;
+    height: 25px;
+  }
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+
+}
+
+.chat-side {
+  float: left;
+  width: 300px;
+  height: 100vh;
+  background-color: #2f3e51;
+  a {
+    color: white;
+  }
+}
+
+
+.side-header {
+  /*position: fixed;
+  top: 0px;
+  left: 0px;*/
+  height: 100px;
+  /*width: 300px;*/
+  background-color: #253141;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+ /* z-index: 10;*/
+  &__box {
+    width: 100%;
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    &__user-name {
+      display: flex;
+    }
+    &__menu {
+      display: flex;
+      li {margin-left: 0.3rem;
+      }
+      &__edit-user {
+        display: flex;
+
+      }
+      &__new-group {
+        display: flex;
+      }
+    }
+
+
+  }
+
+ }
+
+.iconcolor {
+  color: white;
+}
+
+
+
+.groups {
+  height: calc(100vh - 120px);
+  background-color: #2f3e51;
+  padding: 20px 20px 0 20px;
+  overflow: scroll;
+
+}
+
+.group{
+  margin-bottom: 40px;
+  a {
+      .group__group-name {
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+      .group__latest-message {
+        font-size: 11px;
+      }
+  }
+}
+
+.chat-main {
+  float: left;
+  width: calc(100vw - 300px);
+  height: 100vh;
+
+}
+
+.main-header {
+  height: 100px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px #eee;
+  overflow: scroll;
+  &__left-box {
+    margin-top: 35px;
+    &__current-group {
+      font-size: 20px;
+      color: #333333;
+      margin-bottom: 15px;
+    }
+    &__member-list {
+      display: flex;
+      font-size: 12px;
+      color: #999999;
+    }
+  }
+}
+
+.main-header a {
+    color: #38aef0;
+    .main-header__edit-btn {
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      margin-top: 28px;
+      border: solid 1px #38aef0;
+      position: absolute;
+      right: 40px;
+    }
+}
+
+
+
+
+
+
+.messages {
+  height: calc(100vh - 190px - 92px);
+  background-color: #fafafa;
+  padding: 46px 40px;
+  overflow: scroll;
+}
+.message {
+  padding-bottom: 40px;
+  &__upper-info {
+    display: flex;
+    margin-bottom: 10px;
+    &__talker {
+      color: #434a54;
+      font-size: 16px;
+      font-weight: bold;
+
+    }
+    &__date {
+      color: #999999;
+      font-size: 12px;
+      margin-left: 10px;
+
+    }
+  }
+  &__text {
+    color: #434a54;
+    font-size: 14px;
+    margin-bottom: 10px;
+
+  }
+}
+
+.form {
+  /*position: fixed;
+  bottom: 0px;*/
+  height: 90px;
+  background-color: #ddd;
+
+
+}
