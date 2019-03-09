@@ -33,7 +33,7 @@ a {
   width: 300px;
   height: 100vh;
   background-color: #2f3e51;
-  a {
+  p,i {
     color: white;
   }
 }
@@ -57,9 +57,6 @@ a {
     &__menu {
       display: flex;
       li {margin-left: 0.3rem;
-      }
-      a {
-        color: white;
       }
       &__edit-user {
         display: flex;

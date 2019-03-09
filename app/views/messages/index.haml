@@ -9,16 +9,18 @@
 
           %ul.side-header__box__menu
             %li.side-header__box__menu__edit-user
-              %a.fa.fa-edit{ :href => "http://localhost:3000/"}
+              = link_to 'http://localhost:3000/' do
+                %i.fa.fa-edit
             %li.side-header__box__menu__new-group
-              %a.fa.fa-cog{ :href => "http://localhost:3000/"}
+              = link_to 'http://localhost:3000/' do
+                %i.fa.fa-cog
       .groups
         .group
-          %a{ :href => "http://localhost:3000/"}
+          = link_to 'http://localhost:3000/' do
             %p.group__group-name test-group
             %p.group__latest-message test
         .group
-          %a{ :href => "http://localhost:3000/"}
+          = link_to 'http://localhost:3000/' do
             %p.group__group-name test-group2
             %p.group__latest-message test2
 
@@ -29,7 +31,7 @@
           %ul.main-header__left-box__member-list
             %p Member：
             %li.main-header__left-box__member-list__member takaya
-        %a{ :href => "http://localhost:3000/"}
+        = link_to 'http://localhost:3000/' do
           .main-header__edit-btn Edit
       .messages
         .message
