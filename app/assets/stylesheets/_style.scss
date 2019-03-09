@@ -26,7 +26,6 @@ a {
   height: 100vh;
   width: 100vw;
   display: flex;
-
 }
 
 .chat-side {
@@ -39,18 +38,12 @@ a {
   }
 }
 
-
 .side-header {
-  /*position: fixed;
-  top: 0px;
-  left: 0px;*/
   height: 100px;
-  /*width: 300px;*/
   background-color: #253141;
   padding: 0 20px;
   display: flex;
   align-items: center;
- /* z-index: 10;*/
   &__box {
     width: 100%;
     font-weight: bold;
@@ -65,32 +58,24 @@ a {
       display: flex;
       li {margin-left: 0.3rem;
       }
+      a {
+        color: white;
+      }
       &__edit-user {
         display: flex;
-
       }
       &__new-group {
         display: flex;
       }
     }
-
-
   }
-
- }
-
-.iconcolor {
-  color: white;
 }
-
-
 
 .groups {
   height: calc(100vh - 120px);
   background-color: #2f3e51;
   padding: 20px 20px 0 20px;
   overflow: scroll;
-
 }
 
 .group{
@@ -110,7 +95,6 @@ a {
   float: left;
   width: calc(100vw - 300px);
   height: 100vh;
-
 }
 
 .main-header {
@@ -148,11 +132,6 @@ a {
     }
 }
 
-
-
-
-
-
 .messages {
   height: calc(100vh - 190px - 92px);
   background-color: #fafafa;
@@ -168,20 +147,17 @@ a {
       color: #434a54;
       font-size: 16px;
       font-weight: bold;
-
     }
     &__date {
       color: #999999;
       font-size: 12px;
       margin-left: 10px;
-
     }
   }
   &__text {
     color: #434a54;
     font-size: 14px;
     margin-bottom: 10px;
-
   }
 }
 
@@ -189,14 +165,13 @@ a {
   height: 50px;
   padding: 20px 40px;
   background-color: #ddd;
-
 }
 
 .form .new_message {
       display: flex;
       .input-box {
         position: relative;
-        width: 100%;
+        width: 100vw;
         .input-box__text {
           height: 50px;
           width: calc(100% - 50px);
@@ -204,7 +179,6 @@ a {
           color: #434a54;
           border-style: none;
         }
-
         label > input {
           display:none;
         }
@@ -215,7 +189,6 @@ a {
           right: 10px;
           cursor: pointer;
         }
-
       }
       .submit-btn {
         width: 100px;
@@ -225,9 +198,7 @@ a {
         background-color: #38aef0;
         color: white;
         cursor: pointer;
-
       }
-
 }
 
 
