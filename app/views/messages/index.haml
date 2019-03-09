@@ -49,3 +49,11 @@
 
 
         .form
+          %form.new_message{:action => "/", :method => "post"}
+            .input-box
+              %input.input-box__text{:type => "text", :name => "name", :placeholder => "type a message"}
+              %label.input-box__image{:for => "file_upload"}
+                %input{:type => "file", :id => "file_upload"}
+                  %i.fas.fa-image
+            %input.submit-btn{:type => "submit", :value => "Send"}
+
