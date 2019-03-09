@@ -1,10 +1,57 @@
-!!!
-%html
-  %head
-    %title CHATSPACE
-  %body
-    #wrapper
-      #chat-side
-        %h1 横
-      #chat-main
-        %p メインコンテンツ
+%body
+  .flashbox
+    .notice グループを作成しました。
+  .wrapper
+    .chat-side
+      .side-header
+        .side-header__box
+          %p.side-header__box__user-name test USER
+
+          %ul.side-header__box__menu
+            %li.side-header__box__menu__edit-user
+              = link_to 'http://localhost:3000/' do
+                %i.fa.fa-edit
+            %li.side-header__box__menu__new-group
+              = link_to 'http://localhost:3000/' do
+                %i.fa.fa-cog
+      .grouplist
+        .grouplist--group
+          = link_to 'http://localhost:3000/' do
+            %p.grouplist--group__group-name test-group
+            %p.grouplist--group__latest-message test
+        .grouplist--group
+          = link_to 'http://localhost:3000/' do
+            %p.grouplist--group__group-name test-group2
+            %p.grouplist--group__latest-message test2
+
+    .chat-main
+      .main-header
+        .main-header__left-box
+          %h2.main-header__left-box__current-group TEST-group
+          %ul.main-header__left-box__member-list
+            %p Member：
+            %li.main-header__left-box__member-list__member takaya
+        = link_to 'http://localhost:3000/' do
+          .main-header__edit-btn Edit
+      .messages
+        .message
+          .message__upper-info
+            %p.message__upper-info__talker takaya
+            %p.message__upper-info__date 2019/03/06(Wed)13:40:23
+          .message__text test
+        .message
+          .message__upper-info
+            %p.message__upper-info__talker takaya2
+            %p.message__upper-info__date 2019/03/07(Wed)13:40:23
+          .message__text test2
+
+
+      .form
+        %form.new_message{:action => "/", :method => "post"}
+          .input-box
+            %input.input-box__text{:type => "text", :name => "name", :placeholder => "type a message"}
+            %label.input-box__image{:for => "file_upload"}
+              %input{:type => "file", :id => "file_upload"}
+                %i.fas.fa-image
+          %input.submit-btn{:type => "submit", :value => "Send"}
+
