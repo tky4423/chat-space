@@ -1,55 +1,55 @@
 %body
-    .flashbox
-      .notice グループを作成しました。
-    .wrapper
-      .chat-side
-        .side-header
-          .side-header__box
-            %p.side-header__box__user-name test USER
+  .flashbox
+    .notice グループを作成しました。
+  .wrapper
+    .chat-side
+      .side-header
+        .side-header__box
+          %p.side-header__box__user-name test USER
 
-            %ul.side-header__box__menu
-              %li.side-header__box__menu__edit-user
-                %a.fa.fa-edit{ :href => "http://localhost:3000/"}
-              %li.side-header__box__menu__new-group
-                %a.fa.fa-cog{ :href => "http://localhost:3000/"}
-        .groups
-          .group
-            %a{ :href => "http://localhost:3000/"}
-              %p.group__group-name test-group
-              %p.group__latest-message test
-          .group
-            %a{ :href => "http://localhost:3000/"}
-              %p.group__group-name test-group2
-              %p.group__latest-message test2
-
-      .chat-main
-        .main-header
-          .main-header__left-box
-            %h2.main-header__left-box__current-group TEST-group
-            %ul.main-header__left-box__member-list
-              %p Member：
-              %li.main-header__left-box__member-list__member takaya
+          %ul.side-header__box__menu
+            %li.side-header__box__menu__edit-user
+              %a.fa.fa-edit{ :href => "http://localhost:3000/"}
+            %li.side-header__box__menu__new-group
+              %a.fa.fa-cog{ :href => "http://localhost:3000/"}
+      .groups
+        .group
           %a{ :href => "http://localhost:3000/"}
-            .main-header__edit-btn Edit
-        .messages
-          .message
-            .message__upper-info
-              %p.message__upper-info__talker takaya
-              %p.message__upper-info__date 2019/03/06(Wed)13:40:23
-            .message__text test
-          .message
-            .message__upper-info
-              %p.message__upper-info__talker takaya2
-              %p.message__upper-info__date 2019/03/07(Wed)13:40:23
-            .message__text test2
+            %p.group__group-name test-group
+            %p.group__latest-message test
+        .group
+          %a{ :href => "http://localhost:3000/"}
+            %p.group__group-name test-group2
+            %p.group__latest-message test2
+
+    .chat-main
+      .main-header
+        .main-header__left-box
+          %h2.main-header__left-box__current-group TEST-group
+          %ul.main-header__left-box__member-list
+            %p Member：
+            %li.main-header__left-box__member-list__member takaya
+        %a{ :href => "http://localhost:3000/"}
+          .main-header__edit-btn Edit
+      .messages
+        .message
+          .message__upper-info
+            %p.message__upper-info__talker takaya
+            %p.message__upper-info__date 2019/03/06(Wed)13:40:23
+          .message__text test
+        .message
+          .message__upper-info
+            %p.message__upper-info__talker takaya2
+            %p.message__upper-info__date 2019/03/07(Wed)13:40:23
+          .message__text test2
 
 
-        .form
-          %form.new_message{:action => "/", :method => "post"}
-            .input-box
-              %input.input-box__text{:type => "text", :name => "name", :placeholder => "type a message"}
-              %label.input-box__image{:for => "file_upload"}
-                %input{:type => "file", :id => "file_upload"}
-                  %i.fas.fa-image
-            %input.submit-btn{:type => "submit", :value => "Send"}
+      .form
+        %form.new_message{:action => "/", :method => "post"}
+          .input-box
+            %input.input-box__text{:type => "text", :name => "name", :placeholder => "type a message"}
+            %label.input-box__image{:for => "file_upload"}
+              %input{:type => "file", :id => "file_upload"}
+                %i.fas.fa-image
+          %input.submit-btn{:type => "submit", :value => "Send"}
 
