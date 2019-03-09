@@ -14,15 +14,15 @@
             %li.side-header__box__menu__new-group
               = link_to 'http://localhost:3000/' do
                 %i.fa.fa-cog
-      .groups
-        .group
+      .grouplist
+        .grouplist--group
           = link_to 'http://localhost:3000/' do
-            %p.group__group-name test-group
-            %p.group__latest-message test
-        .group
+            %p.grouplist--group__group-name test-group
+            %p.grouplist--group__latest-message test
+        .grouplist--group
           = link_to 'http://localhost:3000/' do
-            %p.group__group-name test-group2
-            %p.group__latest-message test2
+            %p.grouplist--group__group-name test-group2
+            %p.grouplist--group__latest-message test2
 
     .chat-main
       .main-header
