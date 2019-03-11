@@ -1,18 +1,17 @@
 %body
-  .flashbox
-    .notice グループを作成しました。
   .wrapper
     .chat-side
       .side-header
         .side-header__box
-          %p.side-header__box__user-name test USER
+          %p.side-header__box__user-name
+            = current_user.name
 
           %ul.side-header__box__menu
             %li.side-header__box__menu__edit-user
               = link_to 'http://localhost:3000/' do
                 %i.fa.fa-edit
             %li.side-header__box__menu__new-group
-              = link_to 'http://localhost:3000/' do
+              = link_to edit_user_path(current_user) do
                 %i.fa.fa-cog
       .grouplist
         .grouplist--group
