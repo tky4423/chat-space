@@ -1,28 +1,5 @@
 %body
   .wrapper
-    .chat-side
-      .side-header
-        .side-header__box
-          %p.side-header__box__user-name
-            = current_user.name
-
-          %ul.side-header__box__menu
-            %li.side-header__box__menu__edit-user
-              = link_to 'http://localhost:3000/' do
-                %i.fa.fa-edit
-            %li.side-header__box__menu__new-group
-              = link_to edit_user_path(current_user) do
-                %i.fa.fa-cog
-      .grouplist
-        .grouplist--group
-          = link_to 'http://localhost:3000/' do
-            %p.grouplist--group__group-name test-group
-            %p.grouplist--group__latest-message test
-        .grouplist--group
-          = link_to 'http://localhost:3000/' do
-            %p.grouplist--group__group-name test-group2
-            %p.grouplist--group__latest-message test2
-
     .chat-main
       .main-header
         .main-header__left-box
@@ -30,7 +7,7 @@
           %ul.main-header__left-box__member-list
             %p Member：
             %li.main-header__left-box__member-list__member takaya
-        = link_to 'http://localhost:3000/' do
+        = link_to 'http://localhost:3000/groups/1/edit' do
           .main-header__edit-btn Edit
       .messages
         .message
