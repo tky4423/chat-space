@@ -1,5 +1,6 @@
 %body
   .wrapper
+    = render 'shared/side_bar'
     .chat-main
       .main-header
         .main-header__left-box
@@ -10,24 +11,13 @@
         = link_to 'http://localhost:3000/groups/1/edit' do
           .main-header__edit-btn Edit
       .messages
-        .message
-          .message__upper-info
-            %p.message__upper-info__talker takaya
-            %p.message__upper-info__date 2019/03/06(Wed)13:40:23
-          .message__text test
-        .message
-          .message__upper-info
-            %p.message__upper-info__talker takaya2
-            %p.message__upper-info__date 2019/03/07(Wed)13:40:23
-          .message__text test2
-
-
+        = render @messages
       .form
-        %form.new_message{:action => "/", :method => "post"}
+        = form_for [@group, @message] do |f|
           .input-box
-            %input.input-box__text{:type => "text", :name => "name", :placeholder => "type a message"}
-            %label.input-box__image{:for => "file_upload"}
-              %input{:type => "file", :id => "file_upload"}
-                %i.fas.fa-image
-          %input.submit-btn{:type => "submit", :value => "Send"}
+            = f.text_field :body, class: 'input-box__text', placeholder: 'type a message'
+            = f.label :image, class: 'input-box__image' do
+              = icon 'fas', 'image', class: 'icon'
+              = f.file_field :image, class: 'hidden'
+          = f.submit 'Send', class: 'submit-btn'
 

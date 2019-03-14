@@ -13,9 +13,10 @@
             %i.fa.fa-cog
   .grouplist
     - current_user.groups.each do |group|
-      = link_to 'http://localhost:3000/' do
+      = link_to group_messages_path(group) do
         .grouplist--group
           .grouplist--group__group-name
             = group.name
           .grouplist--group__latest-message
-            メッセージはまだありません。
+            = group.show_last_message
+
